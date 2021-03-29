@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= "Here are the titles of given website"
+  ul
+    each val in titles
+      li= val
+    each value in wrong
+      li= value + " -No Response" 
+  
+ 
