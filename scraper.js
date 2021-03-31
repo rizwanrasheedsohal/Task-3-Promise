@@ -24,6 +24,9 @@ getTiles = (addressArray) => {
   let count = 0;
   return new Promise((resolve, reject) => {
     for (let address of addressArray) {
+      if (!validUrl.isUri(address)) {
+        address = "https://" + address;
+      }
       getSingleTitlePromise(address)
         .then((title) => {
           count++;
