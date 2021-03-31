@@ -27,7 +27,7 @@ getTiles = (addressArray) => {
       getSingleTitlePromise(address)
         .then((title) => {
           count++;
-          titles.push(title);
+          titles.push(address + " - " + "'" + title + "'");
           if (addressArray.length == count) {
             resolve(titles);
           }
